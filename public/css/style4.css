@@ -1,0 +1,127 @@
+.contenedor{
+
+    width: 900px;
+    margin: auto;
+}
+
+.contenedor-titulo-controles{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+ 
+.contenedor-titulo-controles h3{
+    color: #fff;
+    font-size: 30px;
+}
+ 
+.contenedor-titulo-controles .indicadores button{
+    background:rgba(83, 120, 223, 0.24);
+    height: 6px;
+    width: 10px;
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button:active{
+    background: red;
+}
+
+
+.letras-recomendadas{
+    margin-bottom: 70px;
+
+}
+
+.letras-recomendadas .contenedor-principal{
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+
+.letras-recomendadas .contenedor-principal .flecha-izquierda,
+.letras-recomendadas .contenedor-principal .flecha-derecha{
+    position: absolute;
+    border: none;
+    background: rgba(0, 0, 0, .3);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 500;
+    transition: .2s ease all;
+}
+
+
+.letras-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.letras-recomendadas .contenedor-principal .flecha-derecha:hover{
+
+    background: rgba(0, 0, 0, .9);
+}
+
+.letras-recomendadas .contenedor-principal .flecha-izquierda{
+
+    left: 0;
+
+}
+.letras-recomendadas .contenedor-principal .flecha-derecha{
+    right: 0 ;
+}
+
+/*carousel*/
+
+.letras-recomendadas .contenedor-carousel{
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+.letras-recomendadas .contenedor-carousel .carousel{
+
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.letras-recomendadas .contenedor-carousel .carousel .letras{
+
+    min-width:20%;
+    transition: .3s ease all;
+
+}
+.letras-recomendadas .contenedor-carousel .carousel .letras.hover{
+
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+.letras-recomendadas .contenedor-carousel .carousel .letras img{
+    width: 100%;
+    vertical-align: top;
+}
+@media screen and (max-width: 800px){
+    
+    .letras-recomendadas .contenedor-carousel {
+
+        overflow: visible;
+    }
+    .letras-recomendadas .contenedor-carousel .carousel{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .letras-recomendadas .indicadores,
+    .letras-recomendadas .flecha-izquierda,
+    .letras-recomendadas .flecha-derecha{
+
+        display: none;
+    }
+    
+}

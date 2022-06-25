@@ -1,0 +1,118 @@
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    min-height: 100vh;
+   
+    font-family: 'Raleway', sans-serif;
+}
+
+.titulo {
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 40px;
+    color: rgb(221, 209, 35);
+}
+
+.subtitulo {
+    margin: 0;
+    color: rgb(245, 244, 244);
+    display: inline;
+    font-size: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.sabor { 
+    color: rgb(255, 255, 255);
+    margin: 7px 0;
+    font-size: 50px;
+    font-weight: 600;
+    text-shadow: 2px 2px 1px rgba(255, 255, 255, 0.7);
+    font-family: 'Dancing Script', cursive;
+    margin-top: 0;
+}
+.carousel {
+    min-height: 300px;
+}
+
+.carousel .carousel-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    
+    width: 150px;
+    height: 150px;
+    
+}
+
+.carousel .carousel-item img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 15px;
+    object-fit: cover;
+
+    
+}
+.carousel .carousel-item  .capa{
+
+    width:0%;
+    height: 50vh;
+    background-color: rgba(56, 53, 53, 0.568);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: .4s all;
+    
+}
+.carousel .carousel-item img:hover > .capa{
+    opacity: 1;
+    visibility: visible;
+}
+.carousel .indicators .indicator-item{
+
+    border-radius: 0;
+    transform: rotate(45deg);
+    margin: 0 15px;
+    background: #36221c;
+}
+.carousel .indicators .indicator-item .capa{
+
+    width:0%;
+    height: 50vh;
+    background-color: rgba(56, 53, 53, 0.568);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: .4s all;
+}
+.modal {
+    text-align: center;
+    border-radius: 8px;
+    width: 50%;
+    color: black;
+    position:initial;
+    z-index: 100;
+    background-color: rgba(255, 206, 206, 0.81);
+    bottom: 0;
+    text-align: center;
+    font-size: 21px;
+}
+
